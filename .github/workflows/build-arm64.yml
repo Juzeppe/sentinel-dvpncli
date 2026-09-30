@@ -24,11 +24,11 @@ jobs:
         run: |
           go version
           make build
-          file sentinel-dvpncli
-          sha256sum sentinel-dvpncli
+          file ./bin/sentinel-dvpncli
+          sha256sum ./bin/sentinel-dvpncli
 
       - name: Upload ARM64 binary
         uses: actions/upload-artifact@v6
         with:
           name: sentinel-dvpncli-linux-arm64
-          path: sentinel-dvpncli
+          path: ./bin/sentinel-dvpncli
